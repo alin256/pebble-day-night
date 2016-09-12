@@ -1,0 +1,57 @@
+{
+    "author": "Sergey Alyaev",
+    "dependencies": {
+        "pebble-clay": "^1.0.2"
+    },
+    "keywords": [],
+    "name": "day-night",
+    "pebble": {
+        "capabilities": [
+            "location",
+            "configurable"
+        ],
+        "displayName": "Day and Night Earth Watchface",
+        "enableMultiJS": false,
+        "messageKeys": [
+            "Place1Name",
+            "Place2Name"
+        ],
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "images/world.png",
+                    "name": "WORLD",
+                    "targetPlatforms": [
+                        "aplite"
+                    ],
+                    "type": "png"
+                },
+                {
+                    "file": "images/three_worlds.png",
+                    "name": "THREE_WORLDS",
+                    "targetPlatforms": [
+                        "basalt"
+                    ],
+                    "type": "png"
+                },
+                {
+                    "file": "images/menu_icon.png",
+                    "menuIcon": true,
+                    "name": "IMAGE_MENU_ICON",
+                    "type": "png"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "aplite",
+            "basalt"
+        ],
+        "uuid": "746a3971-aa23-49a4-a10c-6268b18060b9",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "0.1.0"
+}

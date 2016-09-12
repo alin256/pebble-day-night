@@ -77,6 +77,19 @@ static void draw_earth() {
 #endif
     }
   }
+  #ifdef PBL_BW
+  #else
+  float x_rad_city = 0.09289;
+  float y_rad_city = 1.05403;  
+  float y_sin = 0.869421;
+  float my_pi  = 3.141593;
+  x = (int)(WIDTH*(my_pi + x_rad_city)/(my_pi*2));
+  //y = (int)(HEIGHT*(1.0 - y_sin)/(2.0));
+  y = (int)(HEIGHT*(my_pi/2.0 - y_sin)/(my_pi));
+  int byte = y * gbitmap_get_bytes_per_row(three_worlds) + x;
+  ((char *)gbitmap_get_data(three_worlds))[byte] = 255;
+  ((char *)gbitmap_get_data(three_worlds))[byte+1] = 255;
+  #endif  
   layer_mark_dirty(canvas);
 }
 
